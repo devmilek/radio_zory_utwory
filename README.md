@@ -5,6 +5,7 @@ Aplikacja internetowa do zarządzania bazą danych utworów muzycznych z możliw
 ## Opis Projektu
 
 Aplikacja została stworzona w celu zarządzania informacjami o utworach muzycznych. Umożliwia:
+
 - Dodawanie nowych utworów do bazy danych
 - Edycję istniejących utworów
 - Usuwanie utworów z bazy danych
@@ -15,6 +16,7 @@ Aplikacja została stworzona w celu zarządzania informacjami o utworach muzyczn
 ## Struktura Bazy Danych
 
 Aplikacja wykorzystuje prostą tabelę SQL bez relacji, zawierającą następujące pola:
+
 - **id** - automatycznie generowany identyfikator
 - **tytuł utworu** - nazwa utworu
 - **wykonawca** - artysta wykonujący utwór
@@ -39,24 +41,28 @@ Aplikacja wykorzystuje prostą tabelę SQL bez relacji, zawierającą następuj�
 ## Instalacja i Uruchomienie
 
 ### Wymagania
+
 - Node.js 18+ lub Bun
 - Git
 
 ### Kroki instalacji
 
 1. **Sklonuj repozytorium:**
+
 ```bash
 git clone <url-repozytorium>
 cd radio_zory_rozliczenia
 ```
 
 2. **Skonfiguruj zmienne środowiskowe:**
+
 ```bash
 # Zmień nazwę pliku z .example.env na .env
 mv .example.env .env
 ```
 
 3. **Zainstaluj zależności:**
+
 ```bash
 # Używając Bun (zalecane)
 bun install
@@ -66,6 +72,7 @@ npm install
 ```
 
 4. **Utwórz bazę danych:**
+
 ```bash
 # Używając Bun
 bunx drizzle-kit push
@@ -99,38 +106,29 @@ bun run start  # lub npm run start
 ## Funkcjonalności
 
 ### Zarządzanie Utworami
+
 - **Dodawanie:** Kliknij przycisk "Dodaj utwór" aby dodać nowy rekord
 - **Edycja:** Kliknij ikonę edycji przy wybranym utworze
 - **Usuwanie:** Kliknij ikonę kosza aby usunąć utwór
 
 ### Filtrowanie i Wyszukiwanie
+
 - Użyj paska wyszukiwania do filtrowania utworów
 - Zastosuj filtry zaawansowane dostępne w interfejsie tabeli
 - Parametry filtrowania są zapisywane w URL
 
 ### Eksport Danych
+
 - Wybierz utwory za pomocą checkboxów
-- Kliknij przycisk "Eksportuj" 
+- Kliknij przycisk "Eksportuj"
 - Dostępne formaty: CSV, JSON
 - Każde pole jest eksportowane do osobnej kolumny
 
 ### Paginacja
+
 - Nawiguj przez strony za pomocą kontrolek paginacji
 - Zmień liczbę elementów na stronę
 - Przejdź bezpośrednio do konkretnej strony
-
-## Struktura Projektu
-
-```
-src/
-├── actions/          # Server actions dla CRUD operacji
-├── app/             # App router Next.js
-├── components/      # Komponenty React
-├── db/              # Konfiguracja bazy danych i schema
-├── hooks/           # Custom React hooks
-├── lib/             # Biblioteki pomocnicze
-└── schemas/         # Schematy walidacji
-```
 
 ## Wsparcie
 
